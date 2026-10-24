@@ -1,0 +1,16 @@
+node_modules/
+.env
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+.DS_Store
+# Local SQLite database files
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+
+# Dependencies and secrets
+node_modules/
+.env
+.env.*
+!.env.example

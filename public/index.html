@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f5c3b">
+  <meta name="description" content="Shop farm supplies from Patel Agro Shop. Explore fertilizers, crop care products and plant nutrition.">
+  <title>AgriGuide | Patel Agro Shop</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AgriGuide home"><span class="brand-mark">A</span><span>AgriGuide<small>Patel Agro Shop</small></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#farmer-hub">Farmer Hub</a><a href="#delivery">Delivery</a>
+    </nav>
+    <button id="cart-open" class="button button-outline" type="button">Cart <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">GROW WITH CONFIDENCE</p>
+        <h1>Everything your farm needs, <em>made simpler.</em></h1>
+        <p>Explore farm supplies, learn about products and place an order request with Patel Agro Shop.</p>
+        <a class="button" href="#shop">Explore products <span aria-hidden="true">→</span></a>
+        <p class="small-note">Product information is a guide. Always read the product label and follow local agricultural advice.</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Green agricultural field">
+        <div class="hero-bubble"><span>🌱</span><strong>Better choices</strong><small>For every growing season</small></div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Shop benefits">
+      <div><span>🚜</span><strong>Farm-focused</strong><small>Useful supplies and guidance</small></div>
+      <div><span>📦</span><strong>Delivery choices</strong><small>Home, eligible farm delivery or pickup</small></div>
+      <div><span>🤝</span><strong>Farmer community</strong><small>Learn and share experiences</small></div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE SHOP</p><h2>Find your farm essentials</h2><p>Search products or choose a category.</p></div>
+      </div>
+      <div class="shop-controls">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search products..." aria-label="Search products"></label>
+        <select id="category" aria-label="Filter by category">
+          <option value="">All categories</option>
+          <option value="Pesticides">Pesticides</option>
+<option value="Organic Products">Organic Products</option>
+<option value="Seeds">Seeds</option>
+<option value="Plant Care">Plant Care</option>
+<option value="Irrigation">Irrigation</option>
+          <option>Fertilizers</option>
+          <option>Crop Protection</option>
+          <option>Organic & Natural</option>
+          <option>Plant Nutrition</option>
+        </select>
+      </div>
+      <p id="shop-message" class="notice" role="status"></p>
+      <div id="products" class="product-grid" aria-live="polite"><div class="loading">Loading products…</div></div>
+    </section>
+
+    <section id="delivery" class="section section-tint">
+      <div class="section-heading"><div><p class="eyebrow">DELIVERY THAT FITS</p><h2>Choose what works for you</h2><p>Final availability and delivery timing must be confirmed by the shop.</p></div></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span>🏠</span><h3>Home delivery</h3><p>Get your order delivered to your home, subject to the shop's delivery area.</p></article>
+        <article class="feature-card"><span>🚜</span><h3>Direct farm delivery</h3><p>Available for orders below ₹10,000, subject to location and shop confirmation.</p></article>
+        <article class="feature-card"><span>🏪</span><h3>Shop pickup</h3><p>Place an order request and coordinate collection with the shop.</p></article>
+      </div>
+      <p class="policy-note">Orders of ₹20,000 or more may qualify for bulk-order benefits. Any discount must be confirmed by Patel Agro Shop; this website does not automatically apply one.</p>
+    </section>
+
+    <section id="farmer-hub" class="section">
+      <div class="section-heading"><div><p class="eyebrow">FARMERS HELPING FARMERS</p><h2>Learn from the community</h2><p>Share product feedback to help other customers make informed choices.</p></div></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span>⭐</span><h3>Product reviews</h3><p>Submit a rating and feedback. Reviews should describe real experiences and may be moderated by the shop.</p></article>
+        <article class="feature-card"><span>🧑‍🌾</span><h3>Farmer experiences</h3><p>Add genuine farmer stories only with the farmer's permission. No sample story is presented as a verified customer testimonial here.</p></article>
+        <article class="feature-card"><span>🌟</span><h3>Membership idea</h3><p>A planned membership could offer early access, member-only offers and loyalty rewards after the shop confirms its terms.</p></article>
+      </div>
+      <div class="review-panel">
+        <div><h3>Leave a product review</h3><p class="muted">Reviews are stored in the shop database. Please share honest, respectful feedback.</p></div>
+        <form id="review-form" class="form-grid">
+          <label>Product<select id="review-product" required></select></label>
+          <label>Your name<input id="review-name" required minlength="2" maxlength="60" placeholder="Name"></label>
+          <label>Rating<select id="review-rating" required><option value="5">★★★★★ — Excellent</option><option value="4">★★★★ — Good</option><option value="3">★★★ — Average</option><option value="2">★★ — Poor</option><option value="1">★ — Very poor</option></select></label>
+          <label class="full">Your review<textarea id="review-comment" required minlength="5" maxlength="800" rows="3" placeholder="Share your genuine experience..."></textarea></label>
+          <button class="button" type="submit">Submit review</button><p id="review-message" class="form-message" role="status"></p>
+        </form>
+        <div id="reviews-list" class="reviews-list"></div>
+      </div>
+    </section>
+
+    <section class="membership-banner">
+      <div><p class="eyebrow">COMING SOON</p><h2>Patel Agro Membership</h2><p>Early access to selected stock, member-only offers and loyalty rewards — once officially launched by the shop.</p></div>
+      <span class="membership-icon" aria-hidden="true">🌿</span>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand brand-footer" href="#"><span class="brand-mark">A</span><span>AgriGuide<small>Patel Agro Shop</small></span></a><p>Demo storefront. Replace sample products, stock, contact details and policies with verified shop information before launch.</p><small>© <span id="year"></span> AgriGuide. Agricultural products must be used according to their approved labels.</small></footer>
+
+  <div id="cart-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="drawer-heading"><h2 id="cart-title">Your cart</h2><button id="cart-close" class="icon-button" type="button" aria-label="Close cart">×</button></div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-summary"><div><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div><p class="muted">Delivery charges, availability and final total are confirmed by the shop.</p><button id="checkout-open" class="button button-wide" type="button">Continue to order</button></div>
+    </aside>
+  </div>
+
+  <dialog id="checkout-dialog" class="checkout-dialog">
+    <form id="checkout-form" method="dialog">
+      <div class="drawer-heading"><h2>Order request</h2><button id="checkout-close" class="icon-button" type="button" aria-label="Close checkout">×</button></div>
+      <p class="muted">This submits an order request, not a payment. The shop must confirm your order.</p>
+      <label>Full name<input id="customer-name" required minlength="2" maxlength="80" autocomplete="name"></label>
+      <label>Phone number<input id="customer-phone" required pattern="[+0-9 ()-]{8,20}" autocomplete="tel" placeholder="+91..."></label>
+      <label>Email (optional)<input id="customer-email" type="email" maxlength="120" autocomplete="email"></label>
+      <label>Delivery address / pickup note<textarea id="customer-address" required minlength="8" maxlength="500" rows="3" autocomplete="street-address"></textarea></label>
+      <fieldset><legend>Delivery option</legend>
+        <label class="radio-label"><input type="radio" name="delivery" value="home" checked> Home delivery</label>
+        <label class="radio-label"><input type="radio" name="delivery" value="farm"> Direct farm delivery <small>(orders below ₹10,000; subject to confirmation)</small></label>
+        <label class="radio-label"><input type="radio" name="delivery" value="pickup"> Shop pickup</label>
+      </fieldset>
+      <p id="checkout-message" class="form-message" role="status"></p>
+      <button class="button button-wide" type="submit">Submit order request</button>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

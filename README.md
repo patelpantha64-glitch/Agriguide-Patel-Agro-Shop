@@ -48,10 +48,6 @@ This project does **not** yet include real payment processing, customer accounts
 - `POST /api/reviews`
 - `POST /api/orders`
 
-## Viva quick guide
-- HTML: semantic page structure.
-- CSS: responsive layout using Grid/Flexbox and media queries.
-- JavaScript: fetches products, renders cards, maintains a cart, submits orders.
-- Express: receives API requests and validates input.
+
 - SQLite: persists products, reviews, and orders between server restarts.
 - Server-side validation: the browser is not trusted to enforce order rules.
